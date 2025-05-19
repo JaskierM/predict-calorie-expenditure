@@ -1,1 +1,1 @@
-# predict-calorie-expenditure
+# Predict Calorie Expenditure

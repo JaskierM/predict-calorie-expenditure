@@ -1,0 +1,26 @@
+[project]
+name = "predict-calorie-expenditure"
+version = "0.0.0"
+description = ""
+authors = [
+    {name = "Maxim Borodynya",email = "borody.maxim@gmail.com"}
+]
+license = {text = "Apache 2.0"}
+readme = "README.md"
+repository = "https://github.com/JaskierM/customer-shopping-segmentation"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (>=2.2.6,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
