@@ -1,0 +1,6 @@
+use_binning: true
+use_transformations: true
+use_interactions: true
+use_logs: true
+
+report_path_feature_engineering: "data/08_reporting/03_primary"

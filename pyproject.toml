@@ -1,23 +1,42 @@
 [project]
 name = "predict-calorie-expenditure"
 version = "0.0.0"
-description = ""
+description = "Predict calorie expenditure based on workout data"
 authors = [
-    {name = "Maxim Borodynya",email = "borody.maxim@gmail.com"}
+    { name = "Maxim Borodynya", email = "borody.maxim@gmail.com" }
 ]
-license = {text = "Apache 2.0"}
+license = { text = "Apache 2.0" }
 readme = "README.md"
 repository = "https://github.com/JaskierM/customer-shopping-segmentation"
 requires-python = ">=3.10,<3.13"
 
-dependencies = [
-    "ydata-profiling (>=4.16.1,<5.0.0)",
-    "scikit-learn (>=1.6.1,<2.0.0)",
-    "xgboost (>=3.0.1,<4.0.0)"
-]
+[project.scripts]
+predict-calorie-expenditure = "predict_calorie_expenditure.__main__:main"
 
 [tool.poetry]
 package-mode = false
+
+[tool.poetry.dependencies]
+ydata-profiling = "^4.16.1"
+scikit-learn = "^1.6.1"
+xgboost = "^3.0.1"
+kedro = "^0.19.12"
+kedro-viz = "^11.0.1"
+setuptools = "^80.8.0"
+kedro-datasets = "^7.0.0"
+cloudpickle = "^3.1.1"
+mlflow = "^2.22.0"
+kedro-mlflow = "^0.14.4"
+optuna = "^4.3.0"
+git-filter-repo = "^2.47.0"
+
+[tool.kedro]
+package_name = "predict_calorie_expenditure"
+project_name = "Predict Calorie Expenditure"
+kedro_init_version = "0.19.12"
+tools = "['None']"
+example_pipeline = "True"
+source_dir = "src"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
@@ -25,3 +44,13 @@ ipykernel = "^6.29.5"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools.dynamic.version]
+attr = "predict_calorie_expenditure.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src", ]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "3a000bd312534b439c816088eaf57547"
