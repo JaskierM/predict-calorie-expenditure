@@ -1,0 +1,10 @@
+cv_folds: 5
+
+xgboost_optuna_n_trials: 10
+
+xgboost_params:
+  n_estimators: 500
+  learning_rate: 0.05
+  max_depth: 6
+  subsample: 0.8
+  colsample_bytree: 0.8

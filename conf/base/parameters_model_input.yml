@@ -1,0 +1,5 @@
+feature_ord_levels:
+  Heart_Rate_Group: ["low", "normal", "high"]
+  Duration_Group: ["short", "medium", "long", "very_long"]
+
+report_path_model_inputs_trees: "data/08_reporting/05_model_inputs/trees"

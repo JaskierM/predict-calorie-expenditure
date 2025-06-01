@@ -1,0 +1,87 @@
+raw_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/01_raw/train.csv
+
+raw_test:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/01_raw/test.csv
+
+intermediate_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/02_intermediate/train.csv
+
+intermediate_test:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/02_intermediate/test.csv
+
+primary_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/03_primary/train.csv
+
+primary_test:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/03_primary/test.csv
+
+feature_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/04_feature/train.csv
+
+feature_test:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/04_feature/test.csv
+
+model_inputs_trees_X_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/05_model_inputs/trees/X_train.csv
+
+model_inputs_trees_y_train:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/05_model_inputs/trees/y_train.csv
+
+model_inputs_trees_X_test:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/05_model_inputs/trees/X_test.csv
+
+model_inputs_trees_preprocessor:
+  type: pickle.PickleDataset
+  filepath: data/05_model_inputs/trees/preprocessor.pkl
+  backend: cloudpickle
+  versioned: true
+
+xgboost_best_params:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pickle.PickleDataset
+    filepath: data/06_models/xgboost_best_params.pkl
+
+xgboost_model:
+  type: kedro_mlflow.io.models.MlflowModelTrackingDataset
+  flavor: mlflow.xgboost
+
+xgboost_preds:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
+  dataset:
+    type: pandas.CSVDataset
+    filepath: data/07_model_output/xgboost_preds.csv

@@ -1,0 +1,24 @@
+features_to_drop:
+  # - Sex
+  # - Age_Group
+  # - Height
+  # # - Log_Height
+  # - Weight
+  # # - Log_Weight
+  # - BMI
+  # - Age
+  # # - Log_Age
+
+feature_outlier_thresholds:
+  Heart_Rate:
+    upper: 125
+  Calories_Est:
+    upper: 37
+  Effort:
+    upper: 3800
+  Intensity_Index:
+    upper: 0.85
+  Effort_Per_Kg:
+    upper: 75
+
+report_path_feature_selection: "data/08_reporting/04_feature"

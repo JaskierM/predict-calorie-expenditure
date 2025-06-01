@@ -1,0 +1,11 @@
+drop_duplicates_train: true
+drop_duplicates_test: false
+
+features_cat:
+  - Sex
+  - Is_Short_Session
+  - Is_Fever
+features_date: []
+datetime_format: "%d/%m/%Y"
+
+report_path_data_preprocessing: "data/08_reporting/02_intermediate"

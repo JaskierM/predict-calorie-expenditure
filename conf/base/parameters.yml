@@ -1,0 +1,6 @@
+id_column: "id"
+target_column: "Calories"
+random_state: 42
+
+report_dataset_name_train: "train"
+report_dataset_name_test: "test"
